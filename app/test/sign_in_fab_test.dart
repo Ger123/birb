@@ -6,7 +6,7 @@ void main() {
   testWidgets('Renders sign in', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MaterialApp(
-      home: SignInFab(),
+      home: SignInFab(auth: mockAuth()),
     ));
 
     expect(find.byType(Image), findsOneWidget);

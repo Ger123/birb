@@ -5,6 +5,7 @@ import 'models/post.dart';
 import 'models/post_mock.dart';
 import 'posts_list.dart';
 import 'sign_in_fab.dart';
+import 'utils/auth.dart';
 
 void main() {
   runApp(MyApp());
@@ -55,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0.0,
       ),
       body: PostsList(_loadPosts(context)),
-      floatingActionButton: const SignInFab(),
+      floatingActionButton: const SignInFab(auth: Auth()),
     );
   }
 
