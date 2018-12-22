@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'models/post.dart';
-import 'models/post_mock.dart';
-import 'posts_list.dart';
-import 'sign_in_fab.dart';
+import 'pages/home_page.dart';
+import 'pages/register_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,11 +27,16 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         primaryColor: Colors.white,
         accentColor: Colors.white,
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: const MyHomePage(title: 'Birb'),
+      home: const HomePage(title: 'Birb'),
+      routes: <String, WidgetBuilder>{
+        RegisterPage.routeName: (BuildContext context) => const RegisterPage(),
+      },
     );
   }
 }
+<<<<<<< HEAD
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
@@ -71,3 +74,5 @@ class _MyHomePageState extends State<MyHomePage> {
     return data.map((dynamic item) => Post.fromMap(item)).toList();
   }
 }
+=======
+>>>>>>> 802c4513815dd079f37824b893892671ced91c04
