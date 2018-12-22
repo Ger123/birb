@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'pages/home_page.dart';
 import 'pages/register_page.dart';
 
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-<<<<<<< HEAD
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
@@ -74,5 +73,4 @@ class _MyHomePageState extends State<MyHomePage> {
     return data.map((dynamic item) => Post.fromMap(item)).toList();
   }
 }
-=======
->>>>>>> 802c4513815dd079f37824b893892671ced91c04
+
