@@ -4,6 +4,7 @@ import 'package:birb/post_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:image_test_utils/image_test_utils.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 void main() {
   testWidgets('Renders a post', (WidgetTester tester) async {
@@ -13,10 +14,11 @@ void main() {
       await tester.pumpWidget(MaterialApp(
         home: PostItem(post),
       ));
-
-      expect(find.byType(Image), findsOneWidget);
+      expect(find.byType(CircularProgressIndicator), findsOneWidget);
+      expect(find.byType(CachedNetworkImage), findsOneWidget);
       expect(find.text(post.username), findsOneWidget);
       expect(find.text(post.text), findsOneWidget);
+      expect(Icon, matcher)
     });
   });
 }

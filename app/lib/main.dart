@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Stream<List<Post>> _loadPosts(BuildContext context) {
     final List<List<dynamic>> mockSnapshot = <List<dynamic>>[
       List<dynamic>.generate(10, (int index) => mockPostData(index: index))
-    ];
+    f];
     return Stream<List<dynamic>>.fromIterable(mockSnapshot)
         .map(_convertToPosts);
   }
